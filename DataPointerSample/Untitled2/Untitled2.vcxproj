@@ -133,6 +133,7 @@
     <RootNamespace>Untitled2</RootNamespace>
     <Keyword>Win32Proj</Keyword>
     <AutomaticRetargetPlatformVersion>true</AutomaticRetargetPlatformVersion>
+    <WindowsTargetPlatformVersion>$(WinSDKVerOverride)</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <PropertyGroup Label="TcGeneral">
     <TcGeneralUseTmx>true</TcGeneralUseTmx>
@@ -154,7 +155,7 @@
     <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|TwinCAT RT (x64)'" Label="Configuration">
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|TwinCAT UM (x64)'" Label="Configuration">
     <PlatformToolset>v142</PlatformToolset>
@@ -189,6 +190,9 @@
     <TcSignTwinCatCertName>TcTestCert</TcSignTwinCatCertName>
     <TcSignTwinCatCertPW>1</TcSignTwinCatCertPW>
     <TcSignTwinCatVerbose>true</TcSignTwinCatVerbose>
+  </PropertyGroup>
+  <PropertyGroup Label="TcSign" Condition="'$(Configuration)|$(Platform)'=='Debug|TwinCAT RT (x64)'">
+    <TcSignTwinCat>true</TcSignTwinCat>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|TwinCAT UM (x86)'">
   </ItemDefinitionGroup>
